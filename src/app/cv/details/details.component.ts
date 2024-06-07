@@ -7,11 +7,19 @@ import { ToastrService } from "ngx-toastr";
 import { EMPTY, Observable, catchError } from "rxjs";
 import { AuthService } from "../../auth/services/auth.service";
 import { APP_ROUTES } from "../../config/routes.config";
+import { DefaultImagePipe } from "../pipes/default-image.pipe";
+import { NgIf, AsyncPipe } from "@angular/common";
 
 @Component({
-  selector: "app-details",
-  templateUrl: "./details.component.html",
-  styleUrls: ["./details.component.css"],
+    selector: "app-details",
+    templateUrl: "./details.component.html",
+    styleUrls: ["./details.component.css"],
+    standalone: true,
+    imports: [
+        NgIf,
+        AsyncPipe,
+        DefaultImagePipe,
+    ],
 })
 export class DetailsComponent implements OnInit {
   cv!: Cv | null;

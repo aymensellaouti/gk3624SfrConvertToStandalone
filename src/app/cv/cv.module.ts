@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+/* import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { AddCvComponent } from "./add-cv/add-cv.component";
@@ -12,16 +12,14 @@ import { DetailsComponent } from "./details/details.component";
 import { CvRoutingModule } from "./cv.routing";
 
 @NgModule({
-  declarations: [
-    CvComponent,
-    ItemComponent,
-    ListComponent,
-    DetailCardComponent,
-    DefaultImagePipe,
-    EmbaucheComponent,
-    AddCvComponent,
-    DetailsComponent,
-  ],
-  imports: [CommonModule, FormsModule, CvRoutingModule],
+    imports: [CommonModule, FormsModule, CvRoutingModule, CvComponent,
+        ItemComponent,
+        ListComponent,
+        DetailCardComponent,
+        DefaultImagePipe,
+        EmbaucheComponent,
+        AddCvComponent,
+        DetailsComponent],
 })
 export class CvModule {}
+ */

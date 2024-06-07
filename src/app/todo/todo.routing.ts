@@ -1,17 +1,11 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
 import { TodoComponent } from "./todo/todo.component";
 import { canLeaveGuard } from "./guards/can-leave.guard";
+import { Routes } from "@angular/router";
 
-export const TODO_ROUTES: Routes = [
+export const todoRoutes: Routes = [
   {
-    path: '',
+    path: "",
     component: TodoComponent,
     canDeactivate: [canLeaveGuard],
   },
 ];
-@NgModule({
-  imports: [RouterModule.forChild(TODO_ROUTES)],
-  exports: [RouterModule],
-})
-export class TodoRoutingModule {}

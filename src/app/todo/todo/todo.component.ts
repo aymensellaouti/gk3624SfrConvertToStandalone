@@ -1,12 +1,16 @@
-import { Component, inject } from '@angular/core';
-import { Todo } from '../model/todo';
-import { TodoService } from '../service/todo.service';
+import { Component, inject } from "@angular/core";
+import { Todo } from "../model/todo";
+import { TodoService } from "../service/todo.service";
+import { FormsModule } from "@angular/forms";
+import { NgForOf } from "@angular/common";
 
 @Component({
-  selector: 'app-todo',
-  templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css'],
+  selector: "app-todo",
+  templateUrl: "./todo.component.html",
+  styleUrls: ["./todo.component.css"],
   providers: [TodoService],
+  standalone: true,
+  imports: [FormsModule, NgForOf],
 })
 export class TodoComponent {
   // Quels mes attributs d'états ?
